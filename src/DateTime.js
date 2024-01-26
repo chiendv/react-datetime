@@ -110,12 +110,8 @@ export default class Datetime extends React.Component {
 			onClick: this._onInputClick
 		};
 
-		if ( this.props.renderInput ) {   
-			return (
-				<div>
-					{ this.props.renderInput( finalInputProps, this._openCalendar, this._closeCalendar ) }
-				</div>
-			);
+		if (this.props.renderInput) {
+			return this.props.renderInput(finalInputProps, this._openCalendar, this._closeCalendar);
 		}
 
 		return (
